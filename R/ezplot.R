@@ -1,7 +1,7 @@
 install.packages("ggplot2")
 library(ggplot2)
 
-ezplot <- function(data, x = NA , y = NA, type = NA, outlier= TRUE) {
+ezplot <- function(data, x = NA , y = NA, type = NA) {
   if (is.na(x) & is.na(y) & is.na(type)) {
     pairs(data)
 
@@ -13,39 +13,37 @@ ezplot <- function(data, x = NA , y = NA, type = NA, outlier= TRUE) {
   }
 
   if (type == "bar" & y == "None") {
-    ezplot_bar(data, x, outlier)
+    ezplot_bar(data, x)
+  }
+
+else if (type == "histogram") {
+  ezplot_histogram(data, x)
   }
 
 
+else if (type == "line") {
+  ezplot_line(data, x, y)
+  }
 
-if (type == "histogram") {
-  ezplot_histogram(data, x, outlier)
+else if (type == "scattergram") {
+  ezplot_scattergram(data, x, y)
   }
 
 
-if (type == "line") {
-  ezplot_line(data, x, y, outlier)
-  }
-}
-if (type == "scattergram") {
-  ezplot_scattergram(data, x, y, outlier)
+else if (type == "smooth") {
+  ezplot_smooth(data, x, y)
   }
 
 
-if (type == "smooth") {
-  ezplot_smooth(data, x, y, outlier)
-  }
-
-
-if (type == "boxplot") {
-  ezplot_boxplot(data, x, y, outlier)
+else if (type == "boxplot") {
+  ezplot_boxplot(data, x, y)
 }
 
-if (type == "area") {
-  ezplot_area(data, x, y, outlier)
+else if (type == "area") {
+  ezplot_area(data, x, y)
 }
 
-if (type == "frequency") {
-  ezplot_frequency(data, x, outlier)
+else if (type == "frequency") {
+  ezplot_frequency(data, x)
 }
-
+}
