@@ -7,13 +7,15 @@ ezplot <- function(data, x = NA , y = NA, type = NA, outlier= TRUE) {
 
     x <- readline("Please set the independent variable. ")
     y <- readline("Please set the dependent variable. If inapplicable, type None. ")
-    type <- readline("What type of graph do you want? Options: bar, line, smooth, histogram, boxplot, area, frequency, scattergram. ")
+    type <- readline("What type of graph do you want? Options: bar, line, smooth,
+                     histogram, boxplot, area, frequency, scattergram. ")
 
   }
 
   if (type == "bar" & y == "None") {
     ezplot_bar(data, x, outlier)
   }
+
 
 
 if (type == "histogram") {
@@ -24,15 +26,16 @@ if (type == "histogram") {
 if (type == "line") {
   ezplot_line(data, x, y, outlier)
   }
-
+}
 if (type == "scattergram") {
   ezplot_scattergram(data, x, y, outlier)
   }
-}
+
 
 if (type == "smooth") {
   ezplot_smooth(data, x, y, outlier)
-}
+  }
+
 
 if (type == "boxplot") {
   ezplot_boxplot(data, x, y, outlier)
