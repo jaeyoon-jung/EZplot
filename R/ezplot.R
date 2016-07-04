@@ -30,7 +30,7 @@ ezplot <- function(data, x = NA , y = NA, type = NA) {
     y <- readline("Please set the dependent variable. If inapplicable, type None. ")
     #stores a string value that represents the graph/chart type
     type <- readline("What type of graph do you want? Options: bar, histogram, boxplot,
-                     frequency, scattergram, line, smooth, area     ")
+                     frequency, scattergram, line, smooth, area.     ")
   }
 
 #bar graph
