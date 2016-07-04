@@ -18,6 +18,7 @@
 #' @export
 
 ezplot <- function(data, x = NA , y = NA, type = NA) {
+  library(ggplot2)
 #When only dataset is specified, the function creates pair scattergrams for a quick overview of data
   if (is.na(x) & is.na(y) & is.na(type)) {
     pairs(data)
