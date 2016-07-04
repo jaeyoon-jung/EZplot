@@ -1,9 +1,13 @@
 Package: EZplot
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Function for Simplifying ggplot2 Commands
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: Who to complain to <yourfault@somewhere.net>
-Description: More about what it does (maybe more than one line)
-License: What license is it under?
+Author: Jaeyoon Jung, Vance Matthews, Karan Talreja
+Description: This package is an interactive tool that simplifies ggplot2 package
+    for beginners. It creates well-formatted charts and prints appropriate summary
+    statistics.
+License: GPL-3
 LazyData: TRUE
+Imports:
+    ggplot2
+RoxygenNote: 5.0.1
